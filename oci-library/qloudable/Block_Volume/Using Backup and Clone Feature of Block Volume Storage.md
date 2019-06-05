@@ -10,11 +10,9 @@
 
 [Create ssh keys, compute instance and Block Volume](#create-ssh-keys,-compute-instance-and-block-volume)
 
-[Clone Block Volume and explore Volume Groups
-](#clone-block-volume-and-explore-volume-groups)
+[Clone Block Volume and explore Volume Groups](#clone-block-volume-and-explore-volume-groups)
 
 [Delete the resources](#delete-the-resources)
-
 
 
 ## Overview
