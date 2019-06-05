@@ -66,6 +66,8 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 - **Password:** {{Password}}
 - **Compartment:**{{Compartment}}
 
+
+
 1. Testing this Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
