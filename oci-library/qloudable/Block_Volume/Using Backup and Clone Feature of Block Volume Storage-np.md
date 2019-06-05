@@ -151,6 +151,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 
 8. Click Create Instance. Fill out the dialog box:
 
+
 - Name: Enter a name 
 - Availability Domain: Select availability domain
 - Image Operating System: For the image, we recommend using the Latest Oracle Linux available.
@@ -162,6 +163,7 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 - Virtual Cloud Network: Select the VCN you created in the previous section. 
 - Subnet Compartment: Choose your compartment. 
 - Subnet: Choose the first Subnet
+
 
 9. Click **Create**
 
