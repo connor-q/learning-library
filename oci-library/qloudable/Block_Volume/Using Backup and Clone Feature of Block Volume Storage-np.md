@@ -48,13 +48,18 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 
 1. Oracle Cloud Infrastructure account credentials (User, Password, Tenant, and Compartment)  
 
+
 2. OCI Training: https://cloud.oracle.com/en_US/iaas/training
+
 
 3. Familiarity with OCI console: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm
 
+
 4. Overview of Networking: https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm
 
+
 5. Familiarity with Compartment: https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm
+
 
 6. Connecting to a compute instance: https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm
 
@@ -72,21 +77,28 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text" height="200" width="200">
 
+
 2. From the OCI Services menu,click **Virtual Cloud Network** under Networking and click **Create Virtual Cloud Network**
+
 
 3. Select the compartment assigned to you from drop down menu on left part of the screen
 
+
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
+
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text" height="200" width="200">
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL002.PNG" alt="image-alt-text" height="200" width="200">
 
+
 4. Fill out the dialog box:
+
 
 - Create in Compartment: Has the correct compartment
 - Name: Enter easy to remember name
 - Create Virtual Cloud Network Plus Related Resources: Select this option.
+
 
 5. Click **Create Virtual Cloud Network**
 
@@ -104,9 +116,13 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL006.PNG" alt="image-alt-text" height="200" width="200">
 
 2. Enter command 
+
+
 ```
 ssh-keygen
 ```
+
+
 **HINT:** You can swap between OCI window, 
 git-bash sessions and any other application (Notepad, etc.) by clicking the Switch Window icon 
 
@@ -126,19 +142,30 @@ git-bash sessions and any other application (Notepad, etc.) by clicking the Swit
 Compute instance and id_rsa to connect via SSH into compute instance.
 
 **HINT:** Enter command 
+
+
 ```
 cd /C/Users/PhotonUser/.ssh (No Spaces) 
 ```
+
+
 and then 
+
+
 ```
 ls 
 ```
+
+
 to verify the two files exist. 
 
 5. In git-bash Enter command  
+
+
 ```
 cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 ```
+ 
  , highlight the key and copy 
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL009.PNG" alt="image-alt-text" height="200" width="200">
@@ -172,15 +199,22 @@ cat /C/Users/PhotonUser/.ssh/id_rsa.pub
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL0011.PNG" alt="image-alt-text" height="200" width="200">
 
 10. Wait for Instance to be in **Running** state. In git-bash Enter Command:
+
+
 ```
  cd /C/Users/PhotonUser/.ssh
 ```
+
+
 11. Enter **ls** and verify id_rsa file exists
 
 12. Enter command 
+
+
 ```
 ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 ```
+
 
 **HINT:** If 'Permission denied error' is seen, ensure you are using '-i' in the ssh command. You MUST type the command, do NOT copy and paste ssh command
 
@@ -194,12 +228,14 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 16. Fill out the dialog box:
 
+
 - Name: Enter a name for the block volume 
 - Create in Compartment: Has the correct compartment selected.
 - Availability Domain: Select availability domain **(must be differetn from compute instance's AD)**
 - SIZE: Set to 50
 - BACKUP POLICY: Leave as is
 - ENCRYPTION: ENCRYPT USING ORACLE-MANAGED KEYS
+
 
 17. Click **Create Block Volume**. Wait for Block Volume state to change from 'Provisioning' to 'Available'
 
@@ -221,8 +257,10 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 22. Fill out the dialog box:
 
+
 - Name: Provide a Name
 - BACKUP TYPE: Full Backup
+
 
 23. Click **Create Block Volume Backup**
 
@@ -236,12 +274,14 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 26. Fill out the dialog box:
 
+
 - Name: Enter a name for the block volume 
 - Create in Compartment: Has the correct compartment selected.
 - Availability Domain: Select availability domain **(must be the same as compute instance's AD)**
 - BLOCK VOLUME SIZE: Should be set to 50
 - BACKUP POLICY: Leave as is
 - ENCRYPTION: ENCRYPT USING ORACLE-MANAGED KEYS
+
 
 27. From OCI services menu Click **Instance** under Compute 
 
@@ -266,10 +306,12 @@ ssh -i id_rsa_user opc@<PUBLIC_IP_OF_COMPUTE>
 
 1. From OCI services menu Click **Block Volumes** under Block Storage, locate the Original Block Volume create.Click Action icon  and then Create Clone.Fill out the dialog box:
 
+
 - NAME: Provide a Name
 - CREATE IN COMPARTMENT: Choose your compartment
 - BLOCK VOLUME SIZE: Should be set to 50
 - ENCRYPTION: ENCRYPT USING ORACLE-MANAGED KEYS
+
 
 2. Click **Creat Clone**
 
@@ -285,15 +327,20 @@ This simplifies the process to create time-consistent backups of running enterpr
 
 5. Click **Volume Groups** and then **Create Volume Group**. Fill out the dialog box:
 
+
 - NAME: Provide a Name
 - CREATE IN COMPARTMENT: Choose your Compartment
 - CREATE IN AVAILABILITY DOMAIN: Choose the availability domain whose volume need to be grouped
 
+
 **NOTE: Only volumes that exist in this AD will appear in the list**
 
 Under **Volumes**
+
+
 - COMPARTMENT: Choose your comparment
 - VOLUME: Click on the drop down and choose the volume that you want to group togehter
+ 
  
 6. To choose additional volumes (Block or boot) click **+Volume** and add additional volumes
 
