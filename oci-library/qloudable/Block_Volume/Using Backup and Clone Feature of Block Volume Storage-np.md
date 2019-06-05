@@ -1,4 +1,4 @@
-﻿# Using Backup and Clone Feature of Block Volume Storage
+# Using Backup and Clone Feature of Block Volume Storage
 
 ## Table of Contents
 
