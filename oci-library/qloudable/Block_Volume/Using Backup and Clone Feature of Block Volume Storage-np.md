@@ -84,11 +84,9 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 
 4. Fill out the dialog box:
 
-
 - Create in Compartment: Has the correct compartment
 - Name: Enter easy to remember name
 - Create Virtual Cloud Network Plus Related Resources: Select this option.
-
 
 5. Click **Create Virtual Cloud Network**
 
