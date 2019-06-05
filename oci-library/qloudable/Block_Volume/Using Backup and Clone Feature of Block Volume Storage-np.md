@@ -61,10 +61,10 @@ In this lab you will create and attach Block Volume Storage to a compute instanc
 
 ## Sign in to OCI Console and create VCN
 
-* **Tenant Name:** {{Cloud Tenant}}
-* **User Name:** {{User Name}}
-* **Password:** {{Password}}
-* **Compartment:**{{Compartment}}
+- **Tenant Name:** {{Cloud Tenant}}
+- **User Name:** {{User Name}}
+- **Password:** {{Password}}
+- **Compartment:**{{Compartment}}
 
 1. Testing this Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**
 
